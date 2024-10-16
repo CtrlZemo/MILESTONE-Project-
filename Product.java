@@ -38,4 +38,13 @@ public class Product { // encapsulated parent class storing basic information ab
     public void displayProduct() {
         System.out.println("Product ID: " + productID + ", Name: " + productName + ", Category: " + category + ", Price: PHP" + price);
     }
+
+    // Setter methods for updating product
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
 }
