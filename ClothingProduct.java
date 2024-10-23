@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 
-public class ClothingProduct extends Product {
+public class ClothingProduct extends Product implements IClothing {
     private String size;
     private String material;
 
@@ -10,15 +10,19 @@ public class ClothingProduct extends Product {
         this.material = material;
     }
 
+    @Override
     public String getSize() {
         return size;
     }
 
+    @Override
     public String getMaterial() {
         return material;
     }
 
+    @Override
     public void getFitRecommendation() {
         System.out.println("Fit recommendation for size: " + size);
     }
 }
+

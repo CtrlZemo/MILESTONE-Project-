@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 
-public class PerishableProduct extends Product {
+public class PerishableProduct extends Product implements IPerishable {
     private LocalDate dateExpiry;
     private int shelfLife;
 
@@ -10,16 +10,19 @@ public class PerishableProduct extends Product {
         this.shelfLife = shelfLife;
     }
 
+    @Override
     public boolean checkExpiry() {
         return LocalDate.now().isAfter(dateExpiry);
+    }
+
+    @Override
+    public LocalDate getDateExpiry() {
+        return dateExpiry;
     }
 
     public int getShelfLife() {
         return shelfLife;
     }
-
-    public LocalDate getDateExpiry() {
-        return dateExpiry;
-    }
 }
+
 

@@ -2,7 +2,7 @@ import java.util.List;
 
 public class SearchProduct {
 
-    // Search for a product by name (not case sensitive)
+    // Search for a product by name (case insensitive)
     public Product searchByName(String name, List<Product> productList) {
         for (Product product : productList) {
             if (product.getProductName().equalsIgnoreCase(name)) {
